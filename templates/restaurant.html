@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ restaurant['Restaurant Name'] }}</title>
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            background: linear-gradient(to right, #c22ed0, #5ffae0); /* Gradient background */
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #fd0800;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .important {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .highlight {
+            color: #5bc0de;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Welcome to {{ restaurant['Restaurant Name'] }}</h1>
+        <p class="important"><strong>Aggregate Rating:</strong> <span class="highlight">{{ restaurant['Aggregate rating'] }}</span> (<span class="{{ rating_class }}">{{ restaurant['Rating text'] }}</span>)</p>
+        <p class="important"><strong>Average Cost for Two:</strong> {{ restaurant['Average Cost for two'] }} {{ restaurant['Currency'] }}</p>
+        <p class="important"><strong>Address:</strong> {{ restaurant['Address'] }}</p>
+        <p class="important"><strong>Cuisines:</strong> {{ restaurant['Cuisines'] }}</p>
+        <p><strong>City:</strong> {{ restaurant['City'] }}</p>
+        <p><strong>Country:</strong> {{ restaurant['Country'] }}</p>
+        <p><strong>Locality:</strong> {{ restaurant['Locality'] }}</p>
+        <p><strong>Latitude:</strong> {{ restaurant['Latitude'] }}</p>
+        <p><strong>Longitude:</strong> {{ restaurant['Longitude'] }}</p>
+        <p><strong>Price Range:</strong> {{ restaurant['Price range'] }}</p>
+        <p><strong>Has Online Delivery:</strong> {{ restaurant['Has Online delivery'] }}</p>
+        <p><strong>Has Table Booking:</strong> {{ restaurant['Has Table booking'] }}</p>
+        <p><strong>Is Delivering Now:</strong> {{ restaurant['Is delivering now'] }}</p>
+        <p><strong>Switch to Order Menu:</strong> {{ restaurant['Switch to order menu'] }}</p>
+        <p><strong>Votes:</strong> {{ restaurant['Votes'] }}</p>
+    </div>
+
+    
+</body>
+</html>
